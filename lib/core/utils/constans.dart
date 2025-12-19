@@ -10,5 +10,5 @@ const linearBNB = [
 ];
 const linearCATE = [
   Color.fromARGB(61, 255, 254, 254),
-  Color.fromARGB(35, 0, 0, 0),
+  Color.fromARGB(34, 0, 0, 0),
 ];

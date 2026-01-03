@@ -13,9 +13,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBarr(
-        logoPath: AssetsData.appbarPath,
-      ),
+      appBar: CustomAppBarr(logoPath: AssetsData.appbarPath),
       body: Stack(
         children: [
           CustomScrollView(
@@ -42,7 +40,7 @@ class HomeViewBody extends StatelessWidget {
               const SliverToBoxAdapter(child: BestsellarList()),
             ],
           ),
-          CustomNavigationTabBar()
+          CustomNavigationTabBar(),
         ],
       ),
     );

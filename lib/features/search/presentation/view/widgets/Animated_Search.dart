@@ -11,7 +11,7 @@ class AnimatedSearchHint extends StatefulWidget {
 class _AnimatedSearchHintState extends State<AnimatedSearchHint> {
   final List<String> hints = [
     "Type the name of a book or author📚",
-    "Discover a new book ✨"
+    "Discover a new book ✨",
   ];
 
   int currentIndex = 0;

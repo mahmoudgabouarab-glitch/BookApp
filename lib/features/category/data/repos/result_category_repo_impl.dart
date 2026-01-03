@@ -12,7 +12,9 @@ class ResultCategoryRepoImpl implements ResultCategoryRepo {
   ResultCategoryRepoImpl(this.apiServise);
 
   @override
-  Future<Either<Falier, List<BookModels>>> fetchresultBooks({required String quary}) async {
+  Future<Either<Falier, List<BookModels>>> fetchresultBooks({
+    required String quary,
+  }) async {
     try {
       final data = await apiServise.get(endpoint: "volumes?q=$quary");
 

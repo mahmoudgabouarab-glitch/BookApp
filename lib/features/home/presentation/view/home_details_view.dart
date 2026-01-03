@@ -22,6 +22,6 @@ class _HomeDetailsViewState extends State<HomeDetailsView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: DetailsViewBody(bookModels: widget.bookModels,));
+    return Scaffold(body: DetailsViewBody(bookModels: widget.bookModels));
   }
 }

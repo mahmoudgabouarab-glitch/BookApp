@@ -14,7 +14,7 @@ class BestsellarList extends StatelessWidget {
     return BlocBuilder<NewestBooksCubit, NewestBooksState>(
       builder: (context, state) {
         if (state is NewestBooksSucces) {
-         return ListView.builder(
+          return ListView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemCount: state.books.length,
@@ -30,7 +30,6 @@ class BestsellarList extends StatelessWidget {
         } else {
           return IconLoadingAnimation(icon: Image.asset(AssetsData.loading));
         }
-     
       },
     );
   }

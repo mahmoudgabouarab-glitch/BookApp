@@ -8,7 +8,7 @@ class CustomButton extends StatelessWidget {
   final String text;
   final AlignmentGeometry begin;
   final AlignmentGeometry end;
- CustomButton({
+  const CustomButton({
     super.key,
     this.borderRadius,
     required this.onPressed,

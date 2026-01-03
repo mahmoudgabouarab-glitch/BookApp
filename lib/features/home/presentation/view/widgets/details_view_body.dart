@@ -34,19 +34,22 @@ class DetailsViewBody extends StatelessWidget {
             Text(bookModels.volumeInfo!.title!, style: Styles.textStyle24),
             SizedBox(height: 5),
             Text(
-              bookModels.volumeInfo?.authors?[0]??"",
+              bookModels.volumeInfo?.authors?[0] ?? "",
               style: Styles.textStyle20.copyWith(color: Colors.grey[700]),
             ),
             SizedBox(height: 5),
             //  RateCustum(),
             SizedBox(height: 25),
-            ButtonDetailsBoody(bookModels: bookModels,),
+            ButtonDetailsBoody(bookModels: bookModels),
             SizedBox(height: 25),
             Align(
               alignment: Alignment.centerLeft,
               child: Padding(
                 padding: EdgeInsetsGeometry.symmetric(horizontal: 10),
-                child: Text("You might be interested in", style: Styles.textStyle18),
+                child: Text(
+                  "You might be interested in",
+                  style: Styles.textStyle18,
+                ),
               ),
             ),
             SizedBox(height: 20),

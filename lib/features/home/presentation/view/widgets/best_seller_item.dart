@@ -50,10 +50,7 @@ class BestSellerItem extends StatelessWidget {
                       style: Styles.textStyle16.copyWith(color: pricecolor),
                     ),
                     Spacer(),
-                    RateCustum(
-                      rate: bookModels.volumeInfo?.pageCount?? 0,
-                     
-                    ),
+                    RateCustum(rate: bookModels.volumeInfo?.pageCount ?? 0),
                   ],
                 ),
               ],

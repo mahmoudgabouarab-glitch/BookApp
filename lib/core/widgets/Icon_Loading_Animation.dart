@@ -26,18 +26,18 @@ class _IconLoadingAnimationState extends State<IconLoadingAnimation>
   void initState() {
     super.initState();
 
-    _controller = AnimationController(
-      vsync: this,
-      duration: widget.duration,
-    )..repeat(reverse: true);
+    _controller = AnimationController(vsync: this, duration: widget.duration)
+      ..repeat(reverse: true);
 
-    _rotation = Tween<double>(begin: 0, end: 1).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.bounceIn),
-    );
+    _rotation = Tween<double>(
+      begin: 0,
+      end: 1,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.bounceIn));
 
-    _scale = Tween<double>(begin: 0.8, end: 1.2).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.bounceIn),
-    );
+    _scale = Tween<double>(
+      begin: 0.8,
+      end: 1.2,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.bounceIn));
   }
 
   @override
@@ -57,10 +57,7 @@ class _IconLoadingAnimationState extends State<IconLoadingAnimation>
           builder: (context, child) {
             return Transform.rotate(
               angle: _rotation.value * 6.3, // 2 * pi
-              child: Transform.scale(
-                scale: _scale.value,
-                child: widget.icon,
-              ),
+              child: Transform.scale(scale: _scale.value, child: widget.icon),
             );
           },
         ),

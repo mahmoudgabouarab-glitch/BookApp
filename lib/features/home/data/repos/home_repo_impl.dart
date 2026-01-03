@@ -48,13 +48,14 @@ class HomeRepoImpl implements HomeRepo {
       return left(ServiseFalier(e.toString()));
     }
   }
-  
+
   @override
-  Future<Either<Falier, List<BookModels>>> fetchSimlerBooks({required String category})async {
-     try {
+  Future<Either<Falier, List<BookModels>>> fetchSimlerBooks({
+    required String category,
+  }) async {
+    try {
       var data = await apiServise.get(
-        endpoint:
-            "volumes?sorting=relevance&q=subject:spanish",
+        endpoint: "volumes?sorting=relevance&q=subject:spanish",
       );
       List<BookModels> books = [];
       for (var item in data['items']) {

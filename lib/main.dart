@@ -28,12 +28,13 @@ class MyApp extends StatelessWidget {
               FeaturesBooksCubit(getIt.get<HomeRepoImpl>())..fetchfeaturbooks(),
         ),
         BlocProvider(
-          create: (context) => NewestBooksCubit(getIt.get<HomeRepoImpl>())..fetchnewestbooks(),
+          create: (context) =>
+              NewestBooksCubit(getIt.get<HomeRepoImpl>())..fetchnewestbooks(),
         ),
       ],
       child: MaterialApp.router(
         routerConfig: GoTo.router,
-        locale: Locale('ar'),
+        locale: Locale('en'),
         localizationsDelegates: [
           S.delegate,
           GlobalMaterialLocalizations.delegate,

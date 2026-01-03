@@ -15,14 +15,17 @@ class SearchRepoImpl implements SearchRepo {
     required String query,
   }) async {
     try {
-      final data = await apiServise.get(
-        endpoint: "volumes?q=$query",
-      );
+      final data = await apiServise.get(endpoint: "volumes?q=$query");
 
       List<BookModels> books = [];
       for (var item in data['items']) {
         books.add(BookModels.fromJson(item));
       }
+      final firstChar = query.trim().toLowerCase();
+      books = books.where((book) {
+        final title = book.volumeInfo?.title?.toLowerCase() ?? '';
+        return title.contains(firstChar);
+      }).toList();
 
       return Right(books);
     } catch (e) {

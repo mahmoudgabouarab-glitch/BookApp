@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class RateCustum extends StatelessWidget {
   const RateCustum({super.key, required this.rate});
-final int rate;
+  final int rate;
 
   @override
   Widget build(BuildContext context) {

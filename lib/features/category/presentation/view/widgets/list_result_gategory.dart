@@ -17,7 +17,7 @@ class ListResultGategory extends StatelessWidget {
             child: ListView.builder(
               itemCount: state.books.length,
               itemBuilder: (BuildContext context, int index) {
-                return CustomResultCategort(bookModels: state.books[index],);
+                return CustomResultCategort(bookModels: state.books[index]);
               },
             ),
           );

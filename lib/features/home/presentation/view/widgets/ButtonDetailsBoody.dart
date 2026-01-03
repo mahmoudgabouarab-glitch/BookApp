@@ -19,7 +19,7 @@ class ButtonDetailsBoody extends StatelessWidget {
         ),
         CustomButton(
           onPressed: () async {
-            Uri url = Uri.parse(bookModels.volumeInfo?.previewLink??"");
+            Uri url = Uri.parse(bookModels.volumeInfo?.previewLink ?? "");
             if (!await launchUrl(url)) {
               throw Exception('Could not launch $url');
             }

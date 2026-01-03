@@ -32,13 +32,18 @@ abstract class GoTo {
         path: '/HomeDetailsView',
         builder: (context, state) => BlocProvider(
           create: (context) => SimllerBooksCubit(getIt.get<HomeRepoImpl>()),
-          child: HomeDetailsView(bookModels: state.extra as BookModels,),
+          child: HomeDetailsView(bookModels: state.extra as BookModels),
         ),
       ),
-      //GoRoute(path: '/HomeView', builder: (context, state) => HomeView()),
       GoRoute(path: '/SearchView', builder: (context, state) => SearchView()),
-      GoRoute(path: '/CategoryView', builder: (context, state) => CategoryView()),
-      GoRoute(path: '/ResultCategory', builder: (context, state) => ResultCategory()),
+      GoRoute(
+        path: '/CategoryView',
+        builder: (context, state) => CategoryView(),
+      ),
+      GoRoute(
+        path: '/ResultCategory',
+        builder: (context, state) => ResultCategory(),
+      ),
     ],
   );
 }

@@ -65,8 +65,7 @@ class CustomNavigationTabBar extends StatelessWidget {
                 Expanded(
                   child: IconButton(
                     onPressed: () {
-                       GoRouter.of(context).push("/CategoryView");
-                     
+                      GoRouter.of(context).push("/CategoryView");
                     },
                     icon: Icon(Icons.sort, color: Colors.white),
                   ),

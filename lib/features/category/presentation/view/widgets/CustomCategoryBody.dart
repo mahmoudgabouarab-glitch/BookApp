@@ -15,7 +15,7 @@ class CustomCategoryBody extends StatefulWidget {
 class _CustomCategoryBodyState extends State<CustomCategoryBody> {
   @override
   Widget build(BuildContext context) {
-   final List<CategoryModel> category = categoryapp(context);
+    final List<CategoryModel> category = categoryapp(context);
     return GridView.builder(
       physics: BouncingScrollPhysics(),
       padding: EdgeInsetsGeometry.all(2),
@@ -26,7 +26,7 @@ class _CustomCategoryBodyState extends State<CustomCategoryBody> {
         crossAxisCount: 2,
       ),
       itemBuilder: (context, i) {
-       final categoryItem = category[i];
+        final categoryItem = category[i];
         return Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(colors: linearCATE),
@@ -54,10 +54,7 @@ class _CustomCategoryBodyState extends State<CustomCategoryBody> {
                 Expanded(
                   flex: 1,
                   child: Center(
-                    child: Text(
-                      categoryItem.title,
-                      style: Styles.textStyle16,
-                    ),
+                    child: Text(categoryItem.title, style: Styles.textStyle16),
                   ),
                 ),
               ],

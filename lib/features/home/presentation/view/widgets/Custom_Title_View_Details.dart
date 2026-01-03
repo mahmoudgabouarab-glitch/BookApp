@@ -16,7 +16,7 @@ class CustomTitleViewDetails extends StatelessWidget {
       builder: (context, state) {
         if (state is SimllerBooksSucces) {
           return CarouselSlider.builder(
-            itemCount: state.books.length-1,
+            itemCount: state.books.length - 1,
             itemBuilder: (context, index, realIndex) {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 3),

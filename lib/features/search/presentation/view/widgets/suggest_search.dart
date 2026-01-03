@@ -1,3 +1,4 @@
+import 'package:BookApp/core/utils/assts.dart';
 import 'package:BookApp/core/utils/constans.dart';
 import 'package:BookApp/core/utils/styles.dart';
 import 'package:BookApp/features/home/data/models/book_models/book_models.dart';
@@ -25,16 +26,17 @@ class Suggest extends StatelessWidget {
           elevation: 0,
           child: ListTile(
             leading: Image.network(
-              bookModels.volumeInfo?.imageLinks?.thumbnail ?? "",
+              bookModels.volumeInfo?.imageLinks?.thumbnail ??
+                  AssetsData.exceptionsearch,
             ),
             title: Text(
               bookModels.volumeInfo?.title ?? "",
               style: Styles.textStyle18,
               maxLines: 2,
-              overflow:TextOverflow.ellipsis
+              overflow: TextOverflow.ellipsis,
             ),
             subtitle: Text(
-              bookModels.volumeInfo?.authors?[0] ?? "non",
+              bookModels.volumeInfo?.authors?[0] ?? "NON",
               style: Styles.textStyle14.copyWith(color: Colors.grey[600]),
             ),
             trailing: IconButton(

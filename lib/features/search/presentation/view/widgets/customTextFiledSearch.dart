@@ -14,13 +14,8 @@ class CustomTextFiledSearch extends StatelessWidget {
           context.read<SearchCubit>().fetchsearchBooks(value);
         },
         decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          suffixIcon: const Opacity(
-            opacity: 0.5,
-            child: Icon(Icons.search),
-          ),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+          suffixIcon: const Opacity(opacity: 0.5, child: Icon(Icons.search)),
           labelText: "what do u want",
         ),
       ),

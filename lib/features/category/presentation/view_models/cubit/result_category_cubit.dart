@@ -5,10 +5,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 part 'result_category_state.dart';
 
 class ResultCategoryCubit extends Cubit<ResultCategoryState> {
-  ResultCategoryCubit(this.homeRepo, {required this.quary}) : super(ResultCategoryInitial());
+  ResultCategoryCubit(this.homeRepo, {required this.quary})
+    : super(ResultCategoryInitial());
 
   final ResultCategoryRepo homeRepo;
-final String quary;
+  final String quary;
   Future<void> fetchresultBooks() async {
     emit(ResultCategoryLoading());
     final result = await homeRepo.fetchresultBooks(quary: quary);

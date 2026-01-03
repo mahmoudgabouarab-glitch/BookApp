@@ -1,3 +1,4 @@
+import 'package:BookApp/core/utils/bloc_observer.dart';
 import 'package:BookApp/core/utils/routers.dart';
 import 'package:BookApp/core/utils/service_locator.dart';
 import 'package:BookApp/features/home/data/repos/home_repo_impl.dart';
@@ -10,6 +11,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  Bloc.observer = SimpleBlocObserver();
   setupServiceLocator();
   setupSearchLocator();
   setupresultcategoryLocator();

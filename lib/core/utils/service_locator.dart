@@ -10,14 +10,10 @@ final getIt = GetIt.instance;
 void setupServiceLocator() {
   getIt.registerSingleton<ApiServise>(ApiServise(Dio()));
   getIt.registerSingleton<HomeRepoImpl>(HomeRepoImpl(getIt.get<ApiServise>()));
-}
-
-void setupSearchLocator() {
-  getIt.registerSingleton<SearchRepoImpl>(SearchRepoImpl(ApiServise(Dio())));
-}
-
-void setupresultcategoryLocator() {
+  getIt.registerSingleton<SearchRepoImpl>(
+    SearchRepoImpl(getIt.get<ApiServise>()),
+  );
   getIt.registerSingleton<ResultCategoryRepoImpl>(
-    ResultCategoryRepoImpl(ApiServise(Dio())),
+    ResultCategoryRepoImpl(getIt.get<ApiServise>()),
   );
 }

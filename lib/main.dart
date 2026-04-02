@@ -13,8 +13,6 @@ import 'package:google_fonts/google_fonts.dart';
 void main() {
   Bloc.observer = SimpleBlocObserver();
   setupServiceLocator();
-  setupSearchLocator();
-  setupresultcategoryLocator();
   runApp(const MyApp());
 }
 
